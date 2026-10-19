@@ -12,12 +12,24 @@ import streamlit as st
 
 PROFILE = {
     "name": "Andhika Rizqi Rizaldy",
-    "education": "Information System Graduated, Universitas Komputer Indonesia",
-    "experience": "Pengalaman yang relevan dan dapat dijelaskan",
+    "role": "Data Analyst",
+    "summary": (
+        "Portofolio pembelajaran analisis data, "
+        "visualisasi, dan penyusunan rekomendasi bisnis."
+    ),
+    "about": (
+        "Saya lulusan Sistem Informasi Universitas Komputer Indonesia "
+        "yang sedang mengembangkan kemampuan analisis data "
+        "melalui proyek portofolio."
+    ),
+    "education": (
+        "Lulusan Sistem Informasi, Universitas Komputer Indonesia"
+    ),
+    "experience": "Proyek pembelajaran mandiri analisis data.",
     "email": "andhikarr28@gmail.com",
     "linkedin": "https://www.linkedin.com/in/andhikarr28/",
     "github": "https://github.com/andhikarr28",
-    }
+}
 
 BASE_DIR = Path(__file__).resolve().parent
 CV_PATH = BASE_DIR / "assets" / "cv.pdf"
