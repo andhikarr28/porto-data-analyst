@@ -164,6 +164,312 @@ def filter_sales(data, start, end, categories, regions):
 
 
 # =========================================================
+# PROYEK MATA KULIAH
+# Nilai dan SKS mengikuti transkrip yang diberikan.
+# Uraian tugas adalah rencana pengembangan mandiri, bukan
+# klaim tentang tugas kuliah asli atau pekerjaan selesai.
+# =========================================================
+
+COURSE_PROJECTS = [
+    {
+        "code": "05025",
+        "course": "Sistem Basis Data",
+        "credits": 3,
+        "grade": "A",
+        "category": "Database",
+        "title": "Analisis Penjualan Menggunakan SQL",
+        "tools": ["SQLite", "SQL", "Python"],
+        "related_project": "Analisis Penjualan",
+        "objective": "Menganalisis omzet, laba kotor, serta kontribusi produk dan wilayah dari transaksi sintetis.",
+        "tasks": [
+            "Memeriksa struktur tabel, nilai kosong, dan keunikan ID pesanan.",
+            "Menghitung omzet, laba kotor, jumlah pesanan, dan rata-rata nilai pesanan.",
+            "Membuat query agregasi bulanan, produk, dan wilayah.",
+            "Mencocokkan total hasil query dengan dashboard.",
+        ],
+        "deliverables": ["Dataset CSV", "Database SQLite", "Query SQL", "Laporan interpretasi"],
+        "data_note": "Dapat memakai dataset penjualan sintetis pada menu Dashboard. Satu baris merupakan satu pesanan dengan satu jenis produk.",
+    },
+    {
+        "code": "05033",
+        "course": "Perancangan Basis Data",
+        "credits": 3,
+        "grade": "A",
+        "category": "Database",
+        "title": "Perancangan Database Toko Elektronik",
+        "tools": ["ERD", "SQL", "SQLite"],
+        "related_project": "Analisis Penjualan",
+        "objective": "Merancang hubungan pelanggan, produk, pesanan, dan detail pesanan untuk database toko elektronik.",
+        "tasks": [
+            "Mengidentifikasi kebutuhan informasi dan aturan bisnis toko.",
+            "Menentukan entitas, atribut, primary key, dan foreign key.",
+            "Membuat ERD dan memeriksa normalisasi.",
+            "Membuat tabel serta menguji integritas relasinya.",
+        ],
+        "deliverables": ["ERD", "Kamus data", "Dokumentasi normalisasi", "Skrip pembuatan tabel"],
+        "data_note": "Memerlukan rancangan tabel tambahan. Dataset penjualan satu tabel perlu dikembangkan menjadi struktur relasional.",
+    },
+    {
+        "code": "05149",
+        "course": "Lab. Basis Data",
+        "credits": 2,
+        "grade": "A",
+        "category": "Database",
+        "title": "Analisis Pembelian Berulang Pelanggan",
+        "tools": ["SQLite", "SQL", "Python"],
+        "related_project": "Analisis Retensi Pelanggan",
+        "objective": "Menggabungkan data pelanggan dan pesanan untuk menghitung pembelian berulang.",
+        "tasks": [
+            "Memeriksa relasi customer_id pada tabel customers dan orders.",
+            "Menggunakan JOIN serta menyaring pesanan selesai.",
+            "Menghitung jumlah pesanan setiap pelanggan.",
+            "Menghitung repeat purchase rate dan menjelaskan periode pengamatan.",
+        ],
+        "deliverables": ["Dataset pelanggan dan pesanan", "Query JOIN", "Tabel pembelian berulang", "Catatan analisis"],
+        "data_note": "Memerlukan dataset pelanggan dan pesanan sintetis, seperti pada paket proyek retensi. Data penjualan dashboard belum memiliki customer_id.",
+    },
+    {
+        "code": "05142",
+        "course": "Probabilitas dan Statistik",
+        "credits": 3,
+        "grade": "A",
+        "category": "Statistik",
+        "title": "Analisis Distribusi Nilai Transaksi",
+        "tools": ["Python", "Pandas", "Plotly"],
+        "related_project": "Analisis Penjualan",
+        "objective": "Memahami pemusatan, variasi, dan distribusi nilai transaksi.",
+        "tasks": [
+            "Memeriksa tipe data dan nilai kosong.",
+            "Menghitung mean, median, kuartil, dan standar deviasi.",
+            "Membuat histogram serta boxplot.",
+            "Menafsirkan nilai ekstrem tanpa menghapusnya secara otomatis.",
+        ],
+        "deliverables": ["Kode analisis", "Tabel statistik deskriptif", "Histogram dan boxplot", "Interpretasi distribusi"],
+        "data_note": "Dapat memakai kolom revenue dari dataset penjualan sintetis. Nilai ekstrem dapat berasal dari perbedaan harga produk.",
+    },
+    {
+        "code": "05187",
+        "course": "Laboratorium Probabilitas dan Statistik",
+        "credits": 2,
+        "grade": "A",
+        "category": "Statistik",
+        "title": "Perbandingan Nilai Transaksi Antarwilayah",
+        "tools": ["Excel", "Python"],
+        "related_project": "Analisis Penjualan",
+        "objective": "Membandingkan distribusi nilai transaksi dengan memperhatikan ukuran sampel dan komposisi produk.",
+        "tasks": [
+            "Mengelompokkan transaksi berdasarkan wilayah.",
+            "Menghitung ukuran sampel, median, dan variasi nilai transaksi.",
+            "Membuat visualisasi distribusi antarwilayah.",
+            "Meninjau komposisi produk sebelum menafsirkan perbedaan.",
+        ],
+        "deliverables": ["Tabel perbandingan", "Grafik distribusi", "Kode atau lembar kerja", "Ringkasan interpretasi"],
+        "data_note": "Dapat memakai dataset penjualan sintetis. Perbandingan deskriptif tidak membuktikan hubungan sebab akibat.",
+    },
+    {
+        "code": "05082",
+        "course": "Data Mining",
+        "credits": 3,
+        "grade": "A",
+        "category": "Analisis Pelanggan",
+        "title": "Segmentasi Pelanggan Menggunakan RFM",
+        "tools": ["Python", "Pandas"],
+        "related_project": "Analisis Retensi Pelanggan",
+        "objective": "Mengelompokkan pelanggan berdasarkan recency, frequency, dan monetary dari transaksi sintetis.",
+        "tasks": [
+            "Menentukan tanggal evaluasi tetap dan menyaring transaksi selesai.",
+            "Menghitung recency, frequency, dan monetary setiap pelanggan.",
+            "Menentukan aturan skor, termasuk penanganan nilai yang sama.",
+            "Membuat profil segmen dan membahas sensitivitas aturan segmentasi.",
+        ],
+        "deliverables": ["Tabel RFM", "Aturan skor", "Visualisasi segmen", "Rekomendasi bersyarat"],
+        "data_note": "Memerlukan transaksi dengan customer_id. RFM merupakan segmentasi berbasis aturan; proyek ini belum mencakup model clustering.",
+    },
+    {
+        "code": "05071",
+        "course": "Analisis Proses Bisnis",
+        "credits": 3,
+        "grade": "A",
+        "category": "Operasional",
+        "title": "Analisis Keterlambatan Pengiriman",
+        "tools": ["Excel", "SQL", "Power BI"],
+        "related_project": "Analisis Kinerja Operasional",
+        "objective": "Mengidentifikasi pola keterlambatan pada tahap persiapan dan pengiriman pesanan.",
+        "tasks": [
+            "Menggambarkan alur pemrosesan pesanan.",
+            "Memeriksa urutan tanggal dan menghitung durasi proses.",
+            "Membedakan pengiriman selesai, belum selesai, dan dibatalkan.",
+            "Menghitung ketepatan waktu dan membandingkan gudang serta wilayah.",
+        ],
+        "deliverables": ["Diagram proses", "KPI operasional", "Dashboard pengiriman", "Usulan pemeriksaan lanjutan"],
+        "data_note": "Memerlukan dataset pengiriman seperti pada paket proyek operasional. Definisi tenggat dan tanggal evaluasi harus dicantumkan.",
+    },
+    {
+        "code": "05148",
+        "course": "Operasional Riset",
+        "credits": 3,
+        "grade": "A",
+        "category": "Operasional",
+        "title": "Simulasi Optimasi Alokasi Pengiriman",
+        "tools": ["Excel Solver"],
+        "related_project": "Analisis Kinerja Operasional",
+        "objective": "Mencari alokasi pengiriman dengan biaya minimum berdasarkan kapasitas dan permintaan simulasi.",
+        "tasks": [
+            "Menyusun matriks biaya, kapasitas gudang, dan permintaan wilayah.",
+            "Menentukan variabel keputusan dan fungsi tujuan.",
+            "Menambahkan batasan kapasitas, permintaan, dan nonnegativitas.",
+            "Menyelesaikan model, memeriksa kelayakan, dan membandingkan skenario.",
+        ],
+        "deliverables": ["Data asumsi simulasi", "Model Excel Solver", "Alokasi hasil optimasi", "Pemeriksaan batasan"],
+        "data_note": "Matriks biaya, kapasitas, dan permintaan perlu dibuat terpisah. Dataset pengiriman saja belum cukup untuk optimasi.",
+    },
+    {
+        "code": "05170",
+        "course": "Komputer Aplikasi Sistem Informasi",
+        "credits": 3,
+        "grade": "A",
+        "category": "Visualisasi",
+        "title": "Dashboard Penjualan Menggunakan Excel",
+        "tools": ["Excel", "Pivot Table"],
+        "related_project": "Analisis Penjualan",
+        "objective": "Menyajikan indikator penjualan pada dashboard spreadsheet dengan filter yang konsisten.",
+        "tasks": [
+            "Mengimpor CSV dan memeriksa tipe tanggal serta angka.",
+            "Membuat tabel Excel dan pivot penjualan.",
+            "Menambahkan grafik serta filter yang terhubung.",
+            "Mencocokkan angka dashboard dengan data sumber.",
+        ],
+        "deliverables": ["Workbook Excel", "Pivot table", "Dashboard dan filter", "Panduan singkat"],
+        "data_note": "Dapat memakai CSV dari Dashboard. Workbook Excel perlu dibuat sebagai luaran tersendiri.",
+    },
+    {
+        "code": "05189",
+        "course": "Konsep Sistem Informasi Geografis",
+        "credits": 2,
+        "grade": "A",
+        "category": "Visualisasi",
+        "title": "Pemetaan Penjualan Antarprovinsi",
+        "tools": ["QGIS", "Python"],
+        "related_project": "Analisis Penjualan",
+        "objective": "Memetakan distribusi penjualan menggunakan kode provinsi dan batas administrasi yang sesuai.",
+        "tasks": [
+            "Menyiapkan data penjualan sintetis per provinsi.",
+            "Mencatat sumber dan lisensi batas administrasi.",
+            "Menggabungkan data menggunakan kode provinsi yang cocok.",
+            "Memeriksa wilayah yang tidak cocok dan membuat peta berlegenda.",
+        ],
+        "deliverables": ["Data provinsi", "Proyek peta", "Peta penjualan", "Dokumentasi sumber dan penggabungan"],
+        "data_note": "Label Barat, Tengah, dan Timur pada dashboard tidak cukup untuk pemetaan provinsi. Diperlukan data provinsi serta geometri yang sesuai.",
+    },
+]
+
+# Ubah atribut ini pada objek mata kuliah terkait setelah mulai dikerjakan.
+# Contoh: "status": "Dalam pengerjaan", "github_url": "https://..."
+for course in COURSE_PROJECTS:
+    course.setdefault("status", "Rencana")
+    course.setdefault("work_type", "Pengembangan mandiri berbasis mata kuliah")
+    course.setdefault("findings", "")
+    course.setdefault("github_url", "")
+    course.setdefault("report_url", "")
+
+
+@st.dialog("Detail Proyek Mata Kuliah", width="large")
+def show_course_project(course):
+    st.subheader(course["course"])
+    st.caption(
+        f"Kode {course['code']} · {course['credits']} SKS · Nilai {course['grade']}"
+    )
+    st.write(f"**Judul proyek:** {course['title']}")
+    st.write(f"**Status:** {course['status']}")
+    st.write(f"**Jenis karya:** {course['work_type']}")
+    st.write(f"**Proyek terkait:** {course['related_project']}")
+
+    if course["status"] == "Rencana":
+        st.info("Tugas berikut merupakan rencana pengembangan portofolio dan belum dinyatakan selesai.")
+
+    st.markdown("#### Tujuan")
+    st.write(course["objective"])
+
+    st.markdown("#### Tugas yang dikerjakan")
+    for number, task in enumerate(course["tasks"], start=1):
+        st.write(f"{number}. {task}")
+
+    st.markdown("#### Data dan batasan")
+    st.write(course["data_note"])
+
+    st.markdown("#### Alat")
+    st.write(", ".join(course["tools"]))
+
+    st.markdown("#### Luaran")
+    for item in course["deliverables"]:
+        st.write(f"• {item}")
+
+    st.markdown("#### Hasil dan interpretasi")
+    if course["findings"]:
+        st.write(course["findings"])
+    else:
+        st.caption("Hasil belum ditambahkan. Isi setelah analisis dan pemeriksaan selesai.")
+
+    st.divider()
+    if course["github_url"]:
+        st.link_button("Lihat kode dan dataset", course["github_url"])
+    if course["report_url"]:
+        st.link_button("Lihat laporan", course["report_url"])
+    if not course["github_url"] and not course["report_url"]:
+        st.caption("Berkas dan tautan proyek belum ditambahkan.")
+
+    if st.button("Tutup", key=f"close_course_{course['code']}"):
+        st.rerun()
+
+
+def render_course_projects():
+    st.title("Proyek Mata Kuliah")
+    st.write("Penerapan pembelajaran akademik dalam pengembangan kemampuan analisis data.")
+    st.caption("Klik nama mata kuliah untuk melihat detail tugas. Nilai mengikuti transkrip; uraian tugas merupakan usulan pengembangan mandiri.")
+
+    filter_col, search_col = st.columns(2)
+    categories = sorted({course["category"] for course in COURSE_PROJECTS})
+    with filter_col:
+        selected_category = st.selectbox("Bidang", ["Semua"] + categories, key="course_category")
+    with search_col:
+        search = st.text_input(
+            "Cari mata kuliah atau proyek",
+            placeholder="Contoh: SQL, statistik, pengiriman",
+            key="course_search",
+        ).strip().casefold()
+
+    filtered_courses = []
+    for course in COURSE_PROJECTS:
+        searchable = " ".join([
+            course["code"], course["course"], course["title"], *course["tools"]
+        ]).casefold()
+        if (selected_category == "Semua" or course["category"] == selected_category) and search in searchable:
+            filtered_courses.append(course)
+
+    st.caption(f"Menampilkan {len(filtered_courses)} mata kuliah.")
+    if not filtered_courses:
+        st.info("Tidak ada mata kuliah yang sesuai pencarian.")
+        return
+
+    for start in range(0, len(filtered_courses), 2):
+        columns = st.columns(2)
+        for column, course in zip(columns, filtered_courses[start:start + 2]):
+            with column:
+                with st.container(border=True):
+                    st.caption(f"{course['category']} · {course['status']}")
+                    if st.button(
+                        course["course"],
+                        key=f"open_course_{course['code']}",
+                        use_container_width=True,
+                    ):
+                        show_course_project(course)
+                    st.write(f"**{course['title']}**")
+                    st.caption(f"{course['credits']} SKS · Nilai {course['grade']}")
+                    st.write("Alat: " + ", ".join(course["tools"]))
+
+
+
+# =========================================================
 # NAVIGASI
 # =========================================================
 
@@ -177,6 +483,7 @@ with st.sidebar:
             "Beranda",
             "Tentang Saya",
             "Galeri Proyek",
+            "Proyek Mata Kuliah",
             "Dashboard",
             "CV dan Kontak",
         ],
@@ -411,8 +718,8 @@ dan perbandingan wilayah.
                         "retensi bulanan setiap cohort."
                     )
                     st.warning(
-                        "Dataset dan analisis proyek ini belum dibuat. "
-                        "Belum ada temuan atau rekomendasi empiris."
+                        "Analisis proyek ini belum ditampilkan di aplikasi. "
+                        "Tambahkan hasil setelah pengerjaan dan pemeriksaan selesai."
                     )
 
                 else:
@@ -430,8 +737,8 @@ dan perbandingan wilayah.
                         "keterlambatan."
                     )
                     st.warning(
-                        "Dataset dan analisis proyek ini belum dibuat. "
-                        "Belum ada temuan atau rekomendasi empiris."
+                        "Analisis proyek ini belum ditampilkan di aplikasi. "
+                        "Tambahkan hasil setelah pengerjaan dan pemeriksaan selesai."
                     )
 
                 show_project_links(project)
@@ -440,6 +747,9 @@ dan perbandingan wilayah.
 # =========================================================
 # DASHBOARD
 # =========================================================
+
+elif page == "Proyek Mata Kuliah":
+    render_course_projects()
 
 elif page == "Dashboard":
     st.title("Dashboard Penjualan")
