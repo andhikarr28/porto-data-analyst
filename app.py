@@ -488,7 +488,7 @@ with st.sidebar:
             "Beranda",
             "Tentang Saya",
             "Galeri Proyek",
-            "Mata Kuliah Terkait",
+            "Proyek Mata Kuliah",
             "Dashboard",
             "CV dan Kontak",
         ],
