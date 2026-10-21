@@ -1,0 +1,16 @@
+PEMBARUAN PORTOFOLIO
+1. Ekstrak ZIP.
+2. Ganti app.py lama dengan app.py dari paket ini.
+3. Salin folder assets/certificates ke proyek Anda. Jangan hapus assets/cv.pdf jika sudah ada.
+4. requirements.txt dalam paket berisi dependensi dasar. Jika requirements.txt lama memiliki dependensi tambahan yang Anda butuhkan, pertahankan dependensi tersebut.
+5. Jalankan: python -m streamlit run app.py
+6. Untuk versi online, unggah app.py serta keempat berkas sertifikat ke GitHub dengan susunan folder yang sama. Simpan perubahan dengan Commit changes.
+7. Tema .streamlit/config.toml lama tetap dapat digunakan.
+
+PROYEK DAN SERTIFIKASI
+Empat kartu: aplikasi integrasi Shopee, BNSP Analis Data Madya, pelatihan VSGA Associate Data Scientist, dan magang Lensetek International.
+Klik judul untuk membuka modal. Tombol unduh bukti aktif jika berkas tersedia.
+VSGA ditampilkan sebagai pelatihan sesuai dokumen, bukan sertifikasi kompetensi BNSP.
+Detail judul aplikasi magang, kontribusi pribadi, teknologi, dan tautan aplikasi belum tersedia. Lengkapi pada ACTIVITIES di awal app.py. Bagian details menampung informasi kegiatan; github_url/demo_url/report_url dapat diisi URL sebenarnya.
+Lampiran magang menjelaskan cakupan peran divisi, bukan bukti setiap tugas dikerjakan sendiri.
+Data Mining tetap menggunakan RapidMiner; Laboratorium Probabilitas dan Statistik tetap menggunakan SPSS.

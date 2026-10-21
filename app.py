@@ -25,7 +25,7 @@ PROFILE = {
     "education": (
         "Lulusan Sistem Informasi, Universitas Komputer Indonesia"
     ),
-    "experience": "Proyek pembelajaran mandiri analisis data.",
+    "experience": "Lensetek International Internship Program, divisi Applied AI & Information Systems, Oktober–Desember 2025 (remote).",
     "email": "andhikarr28@gmail.com",
     "linkedin": "https://www.linkedin.com/in/andhikarr28/",
     "github": "https://github.com/andhikarr28",
@@ -34,69 +34,260 @@ PROFILE = {
 BASE_DIR = Path(__file__).resolve().parent
 CV_PATH = BASE_DIR / "assets" / "cv.pdf"
 
-PROJECTS = [
-    {
-        "title": "Analisis Penjualan",
-        "field": "Penjualan",
-        "tools": ["Python", "Pandas", "Plotly"],
-        "status": "Demonstrasi tersedia",
-        "description": (
-            "Menganalisis omzet, laba kotor, tren bulanan, "
-            "dan kontribusi produk."
-        ),
-        "github": "",
-        "report": "",
-    },
-    {
-        "title": "Analisis Retensi Pelanggan",
-        "field": "Pelanggan",
-        "tools": ["SQL", "Python"],
-        "status": "Rancangan proyek",
-        "description": (
-            "Rencana studi cohort untuk mempelajari "
-            "pembelian berulang pelanggan."
-        ),
-        "github": "",
-        "report": "",
-    },
-    {
-        "title": "Analisis Kinerja Operasional",
-        "field": "Operasional",
-        "tools": ["Excel", "Power BI"],
-        "status": "Rancangan proyek",
-        "description": (
-            "Rencana analisis ketepatan waktu dan "
-            "durasi penyelesaian pesanan."
-        ),
-        "github": "",
-        "report": "",
-    },
-]
-
-
-# =========================================================
-# PENGATURAN APLIKASI
-# =========================================================
-
 st.set_page_config(
     page_title="Portofolio Data Analyst",
     page_icon="📊",
     layout="wide",
 )
 
+# =========================================================
+# PROYEK, SERTIFIKASI, DAN MAGANG
+# Isi detail yang belum tersedia setelah bukti pekerjaannya ada.
+# Semua paths berkas bersifat relatif terhadap folder app.py.
+# =========================================================
+
+ACTIVITIES = [
+    {
+        "id": "web-shopee",
+        "title": "Aplikasi Penjualan dan Pembelian Terintegrasi Shopee",
+        "category": "Proyek Aplikasi",
+        "status": "Detail proyek belum dilengkapi",
+        "description": "Proyek aplikasi berbasis web untuk penjualan dan pembelian dengan integrasi Shopee.",
+        "details": {
+            "Bentuk karya": "Aplikasi berbasis web",
+            "Peran pribadi": "",
+            "Periode pengerjaan": "",
+            "Teknologi": "",
+            "Mekanisme integrasi Shopee": "",
+        },
+        "section_title": "Ruang lingkup proyek",
+        "items": [
+            "Penjualan dan pembelian berbasis web.",
+            "Integrasi Shopee; mekanisme dan cakupan data perlu dilengkapi.",
+        ],
+        "note": "Nama teknologi, fitur rinci, status penyelesaian, dan hasil pengujian belum ditambahkan. Lengkapi berdasarkan aplikasi yang benar-benar dikerjakan.",
+        "outcome": "",
+        "github_url": "",
+        "demo_url": "",
+        "report_url": "",
+        "evidence": [],
+    },
+    {
+        "id": "bnsp-data-analyst",
+        "title": "Sertifikasi Kompetensi Analis Data Madya",
+        "category": "Sertifikasi Kompetensi",
+        "status": "Kompeten sesuai sertifikat",
+        "description": "Analis Data Madya (Associate Data Analyst) pada bidang Data Analitik, melalui LSP Informatika atas nama BNSP.",
+        "details": {
+            "Nama pemegang": "Andhika Rizqi Rizaldy",
+            "Kualifikasi": "Analis Data Madya (Associate Data Analyst)",
+            "Bidang": "Data Analitik (Data Analytics)",
+            "Lembaga sertifikasi": "Lembaga Sertifikasi Profesi Informatika",
+            "Atas nama": "Badan Nasional Sertifikasi Profesi (BNSP)",
+            "Tanggal penerbitan": "9 Februari 2026",
+            "Masa berlaku tertulis": "3 tahun",
+        },
+        "section_title": "Unit kompetensi pada lampiran sertifikat",
+        "items": [
+            "Mengumpulkan Data.",
+            "Menelaah Data.",
+            "Memvalidasi Data.",
+            "Menentukan Objek Data.",
+            "Menerapkan Akses Basis Data.",
+        ],
+        "note": "Informasi disalin dari sertifikat dan lampirannya. Contoh pekerjaan asesmen serta perangkat lunak yang digunakan belum dilampirkan.",
+        "outcome": "Sertifikat menyatakan kompeten pada kualifikasi Analis Data Madya.",
+        "github_url": "",
+        "demo_url": "",
+        "report_url": "",
+        "evidence": [
+            {"label": "Unduh sertifikat BNSP", "path": "assets/certificates/bnsp_data_analyst.pdf", "mime": "application/pdf"},
+            {"label": "Unduh lampiran unit kompetensi", "path": "assets/certificates/bnsp_units.jpeg", "mime": "image/jpeg"},
+        ],
+    },
+    {
+        "id": "vsga-data-scientist",
+        "title": "Pelatihan Associate Data Scientist VSGA",
+        "category": "Pelatihan",
+        "status": "Pelatihan selesai sesuai sertifikat",
+        "description": "Pelatihan Associate Data Scientist, VSGA Digital Talent Scholarship 2025, diselenggarakan oleh BPSDMP Bandung selama 24 JP.",
+        "details": {
+            "Nama peserta": "Andhika Rizqi Rizaldy",
+            "Program": "Vocational School Graduate Academy (VSGA)",
+            "Payung program": "Digital Talent Scholarship 2025",
+            "Judul pelatihan": "Associate Data Scientist",
+            "Penyelenggara": "BPSDMP Bandung",
+            "Periode": "18–20 Agustus 2025",
+            "Durasi": "24 Jam Pelatihan (JP)",
+            "Tanggal sertifikat": "30 Agustus 2025",
+        },
+        "section_title": "Materi pelatihan pada sertifikat",
+        "items": [
+            "Menguasai konsep dasar Data Science (2 JP).",
+            "Menggunakan tools Data Science (2 JP).",
+            "Mengumpulkan Data (2 JP).",
+            "Menelaah Data (2 JP).",
+            "Memvalidasi Data (2 JP).",
+            "Menentukan Objek Data (2 JP).",
+            "Membersihkan Data (2 JP).",
+            "Mengkonstruksi Data (2 JP).",
+            "Menentukan Label Data (2 JP).",
+            "Membangun Model (4 JP).",
+            "Mengevaluasi Hasil Pemodelan (2 JP).",
+        ],
+        "note": "Dokumen ini adalah sertifikat pelatihan. Tidak dicantumkan sebagai sertifikat kompetensi BNSP. Alat, dataset, proyek akhir, dan hasil evaluasi model perlu dilengkapi berdasarkan pekerjaan peserta.",
+        "outcome": "Telah menyelesaikan pelatihan Associate Data Scientist selama 24 JP.",
+        "github_url": "",
+        "demo_url": "",
+        "report_url": "",
+        "evidence": [
+            {"label": "Unduh sertifikat pelatihan VSGA", "path": "assets/certificates/vsga_associate_data_scientist.pdf", "mime": "application/pdf"},
+        ],
+    },
+    {
+        "id": "remote-internship",
+        "title": "Magang Remote: Applied AI & Information Systems",
+        "category": "Magang",
+        "status": "Program selesai sesuai sertifikat",
+        "description": "Lensetek International Internship Program, divisi Applied AI & Information Systems, periode Oktober–Desember 2025.",
+        "details": {
+            "Nama pada sertifikat": "Andhika Rizqi",
+            "Penyelenggara": "Lensetek International, LLC",
+            "Program": "Lensetek International Internship Program",
+            "Divisi": "Applied AI & Information Systems Division",
+            "Periode": "Oktober–Desember 2025",
+            "Pelaksanaan": "Remote (berdasarkan keterangan peserta)",
+            "Nama aplikasi": "",
+            "Teknologi aplikasi": "",
+            "Kontribusi pribadi": "",
+        },
+        "section_title": "Cakupan peran divisi menurut lampiran sertifikat",
+        "items": [
+            "Mendukung persiapan dan analisis data.",
+            "Mendukung pengembangan serta pengujian model AI atau machine learning.",
+            "Mendukung integrasi sistem dan pengembangan dashboard.",
+            "Mendokumentasikan hasil proyek.",
+        ],
+        "note": "Lampiran menjelaskan cakupan umum peran peserta pada divisi, bukan rincian kontribusi individu. Output aplikasi disebutkan oleh peserta; nama, fitur, teknologi, dan kontribusi pribadinya belum didokumentasikan di portofolio.",
+        "outcome": "Sertifikat penyelesaian magang tersedia. Detail aplikasi dan bukti hasil kerja akan ditambahkan setelah dilengkapi.",
+        "github_url": "",
+        "demo_url": "",
+        "report_url": "",
+        "evidence": [
+            {"label": "Unduh sertifikat magang", "path": "assets/certificates/internship_lensetek.pdf", "mime": "application/pdf"},
+        ],
+    },
+]
+
+
+@st.dialog("Detail Kegiatan", width="large")
+def show_activity(activity):
+    st.subheader(activity["title"])
+    st.caption(f"{activity['category']} · {activity['status']}")
+    st.write(activity["description"])
+
+    st.markdown("#### Informasi kegiatan")
+    for label, value in activity["details"].items():
+        if value:
+            st.write(f"**{label}:** {value}")
+        else:
+            st.caption(f"{label}: belum ditambahkan.")
+
+    st.markdown("#### " + activity["section_title"])
+    for item in activity["items"]:
+        st.write(f"• {item}")
+
+    st.markdown("#### Hasil dan bukti")
+    if activity["outcome"]:
+        st.write(activity["outcome"])
+    else:
+        st.caption("Hasil proyek belum ditambahkan.")
+
+    st.info(activity["note"])
+
+    for field, label in [
+        ("github_url", "Lihat kode"),
+        ("demo_url", "Buka demo aplikasi"),
+        ("report_url", "Baca laporan"),
+    ]:
+        if activity.get(field):
+            st.link_button(label, activity[field])
+
+    for index, evidence in enumerate(activity["evidence"]):
+        file_path = BASE_DIR / evidence["path"]
+        if file_path.is_file():
+            st.download_button(
+                evidence["label"],
+                data=file_path.read_bytes(),
+                file_name=file_path.name,
+                mime=evidence["mime"],
+                key=f"evidence_{activity['id']}_{index}",
+            )
+        else:
+            st.caption(f"{evidence['label']}: berkas belum tersedia pada aplikasi.")
+
+    if st.button("Tutup", key=f"close_activity_{activity['id']}"):
+        st.rerun()
+
+
+def render_activities():
+    st.title("Proyek dan Sertifikasi")
+    st.write("Proyek aplikasi, sertifikasi kompetensi, pelatihan, dan pengalaman magang.")
+    st.caption("Klik judul kartu untuk membuka detail serta mengunduh bukti yang tersedia.")
+
+    left, right = st.columns(2)
+    with left:
+        category = st.selectbox(
+            "Jenis kegiatan",
+            ["Semua"] + sorted({item["category"] for item in ACTIVITIES}),
+            key="activity_category",
+        )
+    with right:
+        search = st.text_input(
+            "Cari kegiatan",
+            placeholder="Contoh: BNSP, VSGA, Shopee, magang",
+            key="activity_search",
+        ).strip().casefold()
+
+    matches = [item for item in ACTIVITIES
+               if (category == "Semua" or item["category"] == category)
+               and search in " ".join([
+                   item["title"], item["description"], item["category"]
+               ]).casefold()]
+
+    if not matches:
+        st.info("Tidak ada kegiatan yang sesuai pencarian.")
+        return
+
+    for start in range(0, len(matches), 2):
+        columns = st.columns(2)
+        for column, item in zip(columns, matches[start:start + 2]):
+            with column:
+                with st.container(border=True):
+                    st.caption(item["category"])
+                    if st.button(
+                        item["title"],
+                        key=f"open_activity_{item['id']}",
+                        use_container_width=True,
+                    ):
+                        show_activity(item)
+                    st.write(item["description"])
+                    st.caption(item["status"])
+
+
+
+
+# =========================================================
+# PENGATURAN APLIKASI
+# =========================================================
+
+
+
 CHART_COLOR = "#0D9488"
 
 
 def rupiah(value):
     return "Rp" + f"{value:,.0f}".replace(",", ".")
-
-
-def show_project_links(project):
-    if project["github"]:
-        st.link_button("Lihat kode", project["github"])
-
-    if project["report"]:
-        st.link_button("Baca laporan", project["report"])
 
 
 # =========================================================
@@ -487,7 +678,7 @@ with st.sidebar:
         [
             "Beranda",
             "Tentang Saya",
-            "Galeri Proyek",
+            "Proyek dan Sertifikasi",
             "Proyek Mata Kuliah",
             "Dashboard",
             "CV dan Kontak",
@@ -512,7 +703,7 @@ if page == "Beranda":
     st.write(PROFILE["summary"])
 
     st.info(
-        "Gunakan menu Galeri Proyek untuk melihat studi kasus, "
+        "Gunakan menu Proyek dan Sertifikasi untuk melihat kegiatan, "
         "Dashboard untuk mencoba analisis, dan CV dan Kontak "
         "untuk informasi lebih lanjut."
     )
@@ -543,7 +734,7 @@ if page == "Beranda":
         )
 
     st.divider()
-    st.subheader("Proyek unggulan")
+    st.subheader("Demonstrasi analisis")
     st.write("**Analisis Penjualan dengan Dashboard Interaktif**")
     st.write(
         "Eksplorasi 1.200 pesanan sintetis selama tahun 2025 "
@@ -597,161 +788,9 @@ elif page == "Tentang Saya":
 # GALERI DAN DETAIL PROYEK
 # =========================================================
 
-elif page == "Galeri Proyek":
-    st.title("Galeri Proyek")
+elif page == "Proyek dan Sertifikasi":
+    render_activities()
 
-    st.caption(
-        "Analisis penjualan tersedia sebagai demonstrasi. "
-        "Dua proyek lainnya masih berupa rancangan."
-    )
-
-    col1, col2 = st.columns(2)
-
-    all_tools = sorted(
-        {tool for project in PROJECTS for tool in project["tools"]}
-    )
-
-    with col1:
-        tool_filter = st.selectbox(
-            "Filter alat",
-            ["Semua"] + all_tools,
-        )
-
-    with col2:
-        field_filter = st.selectbox(
-            "Filter bidang",
-            ["Semua", "Penjualan", "Pelanggan", "Operasional"],
-        )
-
-    selected_projects = [
-        project
-        for project in PROJECTS
-        if (
-            tool_filter == "Semua"
-            or tool_filter in project["tools"]
-        )
-        and (
-            field_filter == "Semua"
-            or field_filter == project["field"]
-        )
-    ]
-
-    if not selected_projects:
-        st.info("Tidak ada proyek yang sesuai dengan filter.")
-
-    for project in selected_projects:
-        with st.container(border=True):
-            st.subheader(project["title"])
-            st.caption(project["status"])
-            st.write(project["description"])
-            st.write("**Alat:** " + ", ".join(project["tools"]))
-
-            with st.expander("Lihat detail studi kasus"):
-                if project["field"] == "Penjualan":
-                    st.markdown(
-                        """
-**Masalah bisnis**
-
-Bagaimana distribusi omzet dan laba kotor menurut
-produk, wilayah, dan waktu?
-
-**Sumber dan struktur data**
-
-Data sintetis dibangkitkan dengan seed tetap.
-Satu baris merepresentasikan satu pesanan yang
-berisi satu jenis produk.
-
-**Pemeriksaan kualitas**
-
-Periksa keunikan ID pesanan, nilai kosong,
-kuantitas positif, dan konsistensi perhitungan
-omzet serta laba kotor. Dataset ini sudah terstruktur,
-sehingga belum menunjukkan penanganan data mentah
-yang kompleks.
-
-**Metode**
-
-Agregasi deskriptif, tren bulanan, peringkat produk,
-dan perbandingan wilayah.
-                        """
-                    )
-
-                    product_revenue = (
-                        df.groupby("product")["revenue"]
-                        .sum()
-                        .sort_values(ascending=False)
-                    )
-
-                    top_product = product_revenue.index[0]
-                    top_share = (
-                        product_revenue.iloc[0]
-                        / df["revenue"].sum()
-                        * 100
-                    )
-
-                    st.write(
-                        f"**Temuan dari seluruh dataset:** "
-                        f"{top_product} memiliki omzet terbesar, "
-                        f"dengan kontribusi {top_share:.1f}%."
-                    )
-
-                    st.write(
-                        "**Rekomendasi:** periksa jumlah unit dan "
-                        "margin sebelum memprioritaskan produk. "
-                        "Omzet tinggi dapat dipengaruhi harga satuan."
-                    )
-
-                    st.write(
-                        "**Keterbatasan:** data sintetis ini tidak "
-                        "membuktikan pola permintaan pasar. Laba kotor "
-                        "belum memperhitungkan biaya operasional, "
-                        "pajak, retur, atau diskon."
-                    )
-
-                elif project["field"] == "Pelanggan":
-                    st.write(
-                        "**Pertanyaan:** bagaimana proporsi pelanggan "
-                        "yang kembali membeli pada bulan berikutnya?"
-                    )
-                    st.write(
-                        "**Rencana data sintetis:** customer_id, "
-                        "order_id, tanggal, dan nilai transaksi."
-                    )
-                    st.write(
-                        "**Rencana metode:** kelompokkan pelanggan "
-                        "menurut bulan pembelian pertama, lalu hitung "
-                        "retensi bulanan setiap cohort."
-                    )
-                    st.warning(
-                        "Analisis proyek ini belum ditampilkan di aplikasi. "
-                        "Tambahkan hasil setelah pengerjaan dan pemeriksaan selesai."
-                    )
-
-                else:
-                    st.write(
-                        "**Pertanyaan:** pada tahapan mana "
-                        "keterlambatan penyelesaian paling sering terjadi?"
-                    )
-                    st.write(
-                        "**Rencana data sintetis:** order_id, waktu "
-                        "masuk, tenggat, waktu selesai, dan unit kerja."
-                    )
-                    st.write(
-                        "**Rencana metode:** hitung durasi proses, "
-                        "persentase tepat waktu, dan distribusi "
-                        "keterlambatan."
-                    )
-                    st.warning(
-                        "Analisis proyek ini belum ditampilkan di aplikasi. "
-                        "Tambahkan hasil setelah pengerjaan dan pemeriksaan selesai."
-                    )
-
-                show_project_links(project)
-
-
-# =========================================================
-# DASHBOARD
-# =========================================================
 
 elif page == "Proyek Mata Kuliah":
     render_course_projects()
