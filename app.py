@@ -55,9 +55,9 @@ ACTIVITIES = [
         "description": "Proyek aplikasi berbasis web untuk penjualan dan pembelian dengan integrasi Shopee.",
         "details": {
             "Bentuk karya": "Aplikasi berbasis web",
-            "Peran pribadi": "",
-            "Periode pengerjaan": "",
-            "Teknologi": "",
+            "Peran pribadi": "Web Developer dan Integrasi API Shopee",
+            "Periode pengerjaan": "Mei - September 2026",
+            "Teknologi": "Laravel, MySQL, API Shopee",
             "Mekanisme integrasi Shopee": "",
         },
         "section_title": "Ruang lingkup proyek",
