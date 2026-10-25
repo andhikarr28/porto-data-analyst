@@ -32,7 +32,7 @@ PROFILE = {
 }
 
 BASE_DIR = Path(__file__).resolve().parent
-CV_PATH = BASE_DIR / "assets" / "cv.pdf"
+CV_PATH = Path(__file__).resolve().parent / "CV_Data_Analyst.pdf"
 
 st.set_page_config(
     page_title="Portofolio Data Analyst",
