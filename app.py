@@ -25,7 +25,7 @@ PROFILE = {
     "education": (
         "Lulusan Sistem Informasi, Universitas Komputer Indonesia"
     ),
-    "experience": "Lensetek International Internship Program, divisi Applied AI & Information Systems, Oktober–Desember 2025 (remote).",
+    "experience": "Sertifikasi BNSP - Associate Data Analyst Februari 2026.",
     "email": "andhikarr28@gmail.com",
     "linkedin": "https://www.linkedin.com/in/andhikarr28/",
     "github": "https://github.com/andhikarr28",
